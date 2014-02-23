@@ -96,6 +96,8 @@ var DinnerModel = function() {
 		}
 	}
 
+	this.getDishes = function () { return dishes; }
+
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,

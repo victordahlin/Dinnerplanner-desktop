@@ -5,7 +5,11 @@ $(function() {
 	//We instantiate our model
 	var model = new DinnerModel();
 	
-	//And create the needed controllers and views
+	// Views
 	var exampleView = new ExampleView($("#exampleView"),model);
+    var selectDish = new SelectDish($("#selectDish"),model);
+
+	// Controllers
    	var exampleViewController = new ExampleViewController(exampleView,model);
+   	var selectDishController = new SelectDishController(selectDish,model);
 });
