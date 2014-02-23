@@ -26,9 +26,9 @@ var DinnerPrep = function (container,model) {
 		secondColumn.addClass("col-md-4");
 		
 		var name = menuArray[i].name;
-		var dishTitle = $("<b>");
-		dishTitle.html(name);
-		secondColumn.append(dishTitle);
+		var titleText = $("<h3>");
+		titleText.html(name);
+		secondColumn.append(titleText);
 		
 		var ingredients = "ingredients?"; //ska va lista med ingredienser?
 		var tmp = $("<p>");

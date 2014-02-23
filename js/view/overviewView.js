@@ -1,6 +1,6 @@
 //ExampleView Object constructor
 var OverviewView = function (container,model) {
-
+	console.log("bajsabjajsba");
 	var dinnerRow = $(container.find("#myDinner_row"));
 
 	model.addDishToMenu(2);
