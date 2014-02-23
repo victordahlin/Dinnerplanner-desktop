@@ -8,6 +8,7 @@ $(function() {
 	// Views
 	var exampleView = new ExampleView($("#exampleView"),model);
     var selectDish = new SelectDish($("#selectDish"),model);
+	var dinnerPrep = new DinnerPrep($("#dinnerPrep"),model);
 
 	// Controllers
    	var exampleViewController = new ExampleViewController(exampleView,model);
