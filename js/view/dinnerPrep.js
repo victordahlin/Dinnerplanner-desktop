@@ -1,7 +1,6 @@
 var DinnerPrep = function (container,model) {
 	
 	var menuArray = model.getDishes(); //ska vara getFullMenu
-	console.log(menuArray);
 	
 	this.dinnerPrep = container.find("#dinnerPrep");
 	
@@ -9,7 +8,6 @@ var DinnerPrep = function (container,model) {
 		
 		var row = $("<div>");
 		row.addClass("row");
-
 		
 		var firstColumn = $("<div>");
 		firstColumn.addClass("col-md-3");
@@ -29,11 +27,17 @@ var DinnerPrep = function (container,model) {
 		var titleText = $("<h3>");
 		titleText.html(name);
 		secondColumn.append(titleText);
+		/*
+		var ingredients = menuArray[i].ingredients;		
 		
-		var ingredients = "ingredients?"; //ska va lista med ingredienser?
-		var tmp = $("<p>");
-		tmp.html(ingredients)
-		secondColumn.append(tmp);
+		var list = $("<ul>");
+		for ( var i = 0; i < ingredients.length; i++ ){
+			var listRow = $("<li>");
+			listRow.html(ingredients[i].name);
+			list.append(listRow);
+		}
+		secondColumn.append(list);
+		*/
 		
 		var thirdColumn = $("<div>");
 		thirdColumn.addClass("col-md-5");
