@@ -4,8 +4,8 @@ var SelectDish = function (container,model) {
 	this.imageBox = container.find(".col-md-3");
 	
 	console.log(this.imageBox);
-
-	var array = model.getAllDishes().end();
+	var course = "main";
+	var array = model.getAllDishes();
 	//console.log(array);
 	
 	for( var i = 0; i < array.length; i++ ) {
