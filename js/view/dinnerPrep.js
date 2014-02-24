@@ -16,8 +16,7 @@ var DinnerPrep = function (container,model) {
 		var file = "images/" + menuArray[i].image;
 		
 		pictureBox.attr("src",file);
-		pictureBox.attr("width", "120");
-		pictureBox.attr("height", "120");
+
 		firstColumn.append(pictureBox);
 		
 		var secondColumn = $("<div>");
@@ -27,17 +26,18 @@ var DinnerPrep = function (container,model) {
 		var titleText = $("<h3>");
 		titleText.html(name);
 		secondColumn.append(titleText);
-		/*
+		
 		var ingredients = menuArray[i].ingredients;		
+		console.log(ingredients);
 		
 		var list = $("<ul>");
-		for ( var i = 0; i < ingredients.length; i++ ){
+		for ( var j = 0; j < ingredients.length; j++ ){
 			var listRow = $("<li>");
-			listRow.html(ingredients[i].name);
+			listRow.html(ingredients[j].name + "  " + ingredients[j].quantity + " " + ingredients[j].unit );
 			list.append(listRow);
 		}
 		secondColumn.append(list);
-		*/
+		
 		
 		var thirdColumn = $("<div>");
 		thirdColumn.addClass("col-md-5");
