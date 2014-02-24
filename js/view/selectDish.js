@@ -4,15 +4,18 @@ var SelectDish = function (container,model) {
 	var pictureBoxTag = container.find("#picture-box");
 	// Get image box to set click handler
 	this.imageBox = container.find("div");
-	
+	this.filterDD = container.find("#courseSel");
+	this.searchBtn = container.find("#searchBtn");
 	//console.log(this.imageBox); debug
-
+	
+	this.fillDishContainer = function(type, filter){
+		pictureBoxTag.empty();
 	// Temp for getting dishes 
-	var array = model.getAllDishes().end();
-	//console.log(array);
+		var array = model.getAllDishes(type, filter);
+		//console.log(array);	
 	
 	// Create <div class="col-md-3"<img src="X" width=X height=Y></img>
-	for( var i = 0; i < array.length; i++ ) {
+		for( var i = 0; i < array.length; i++ ) {
 			var div = $("<div>");
 			div.addClass("col-md-3");
 			div.css("margin:20px;");
@@ -41,8 +44,9 @@ var SelectDish = function (container,model) {
 			// Set all HTML tags to the #picture-box in #selectDish
 			pictureBoxTag.append(div);
 		}
-
+	}
 	
+	this.fillDishContainer("starter");
 
 	/*****************************************  
 	      Observer implementation    
