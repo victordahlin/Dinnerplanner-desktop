@@ -30,13 +30,24 @@ var OverviewView = function (container,model) {
 		textTitle.html(name);
 		div.append(textTitle);
 
+		var priceArray = array[i].ingredients;
+		int price;
+		for (var j = 0; j < priceArray.length; j++) {
+			price += priceArray.price;
+		}
+		
+		console.log(price);
+		var dishPrice = $("<p>");
+		dishPrice.html(price);
+		div.append(dishPrice);
+
 		console.log(div);
 		dinnerRow.append(div);
 	}
 	var div = $("<div>");
 	div.html("Total menu price:");
 	div.addClass("col-md-1 col-md-offset-1");
-	div.css("border-left", "3px solid black");
+	//div.css("border-left", "3px solid black");
 	div.attr("width", "120");
 	div.attr("height", "120");
 	this.br = $("<br>");
