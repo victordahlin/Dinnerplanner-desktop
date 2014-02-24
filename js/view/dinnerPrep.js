@@ -36,7 +36,7 @@ var DinnerPrep = function (container,model) {
 		var list = $("<ul>");
 		for ( var j = 0; j < ingredients.length; j++ ){
 			var listRow = $("<li>");
-			listRow.html(ingredients[j].name + "  " + ingredients[j].quantity + " " + ingredients[j].unit );
+			listRow.html(ingredients[j].name + ",  " + ingredients[j].quantity + " " + ingredients[j].unit );
 			list.append(listRow);
 		}		
 		
