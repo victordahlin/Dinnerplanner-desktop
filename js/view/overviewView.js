@@ -5,7 +5,6 @@ var OverviewView = function (container,model) {
 	model.addDishToMenu(2);
 	model.addDishToMenu(100);
 	var array = model.getFullMenu();
-	console.log(array);
 	for( var i = 0; i < array.length; i++ ) {
 		var div = $("<div>");
 		if (i==0){
@@ -15,8 +14,7 @@ var OverviewView = function (container,model) {
 			div.addClass("col-md-1");
 		}
 		
-		div.css("margin:20px;");
-
+		div.attr("id", "dish");
 		var pictureBox = $("<img>");
 		var file = "images/" + array[i].image;
 
@@ -26,19 +24,19 @@ var OverviewView = function (container,model) {
 		div.append(pictureBox);
 
 		var name = array[i].name;
-		var textTitle = $("<b>");
+		var textTitle = $("<p>");
 		textTitle.html(name);
 		div.append(textTitle);
 
-		var priceArray = array[i].ingredients;
-		int price;
-		for (var j = 0; j < priceArray.length; j++) {
-			price += priceArray.price;
+		var ingredients = array[i].ingredients;
+		var price = 0.00;
+		for (var j = 0; j < ingredients.length; j++) {
+			price += ingredients[j].price;
 		}
 		
-		console.log(price);
-		var dishPrice = $("<p>");
-		dishPrice.html(price);
+		price = price*model.getNumberOfGuests();
+		var dishPrice = $("<b>");
+		dishPrice.html(price + " SEK");
 		div.append(dishPrice);
 
 		console.log(div);
@@ -46,8 +44,9 @@ var OverviewView = function (container,model) {
 	}
 	var div = $("<div>");
 	div.html("Total menu price:");
-	div.addClass("col-md-1 col-md-offset-1");
+	div.addClass("col-md-1");
 	//div.css("border-left", "3px solid black");
+	div.attr("id","thePriceisRight");
 	div.attr("width", "120");
 	div.attr("height", "120");
 	this.br = $("<br>");
@@ -60,7 +59,7 @@ var OverviewView = function (container,model) {
 	
 	//Set the inital values of the components
 	//this.numberOfGuests.html(model.getNumberOfGuests());
-	this.totalPrice.html(model.getTotalMenuPrice());
+	this.totalPrice.html(model.getTotalMenuPrice() + " SEK");
 	
 	/*****************************************  
 	      Observer implementation    
