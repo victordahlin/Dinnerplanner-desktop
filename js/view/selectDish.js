@@ -1,40 +1,44 @@
 var SelectDish = function (container,model) {	
 
+	// Get picture box to apply new dishes
 	var pictureBoxTag = container.find("#picture-box");
-	this.imageBox = container.find(".col-md-3");
+	// Get image box to set click handler
+	this.imageBox = container.find("div");
 	
-	console.log(this.imageBox);
-	var course = "main";
-	var array = model.getAllDishes();
+	//console.log(this.imageBox); debug
+
+	// Temp for getting dishes 
+	var array = model.getAllDishes().end();
 	//console.log(array);
 	
+	// Create <div class="col-md-3"<img src="X" width=X height=Y></img>
 	for( var i = 0; i < array.length; i++ ) {
 			var div = $("<div>");
 			div.addClass("col-md-3");
 			div.css("margin:20px;");
 
-			var pictureBox = $("<img>");
-			var file = "images/" + array[i].image;
-
-			pictureBox.attr("src",file);
-			pictureBox.attr("width", "120");
-			pictureBox.attr("height", "120");
-			div.append(pictureBox);
+			var imageTag = $("<img>");
+			var file = "images/" + array[i].image; 
+			imageTag.attr("src",file);
+			imageTag.attr("width", "120");
+			imageTag.attr("height", "120");
+			div.append(imageTag);
 
 			var name = array[i].name;
 			var textTitle = $("<p>");
 			textTitle.html(name);
 			div.append(textTitle);
 
+			// Shrink text to a breif text
+			var textDesc = $("<p>");
 			var desc = array[i].description;
-
 			if (desc.length > 20) {
 				desc = desc.substr(0, 17) + "...";
-			}
-			var textDesc = $("<p>");
+			}			
 			textDesc.html(desc);
 			div.append(textDesc);
 
+			// Set all HTML tags to the #picture-box in #selectDish
 			pictureBoxTag.append(div);
 		}
 

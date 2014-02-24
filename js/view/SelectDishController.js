@@ -1,16 +1,13 @@
 var SelectDishController = function(view, model ) {
 
-	//console.log(view.imageBox.end());
-
 	view.imageBox.click(function(event) { 
-		alert("hello");
-/*
+		$(this).hide();
+
 		var array = model.getAllIngredients();
 		var all = "";
 		for(key in array) {
 			all += array[key].name + " ";
 		}
-		//$("#selectDish").html(all);
-		*/
+		$("#showDish").html(all);
 	});
 }
