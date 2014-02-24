@@ -1,10 +1,16 @@
 var SelectDish = function (container,model) {	
 
+	var pictureBoxTag = container.find("#picture-box");
+	this.imageBox = container.find(".col-md-3");
+	
+	console.log(this.imageBox);
+
 	var array = model.getAllDishes().end();
 	//console.log(array);
+	
 	for( var i = 0; i < array.length; i++ ) {
 			var div = $("<div>");
-			div.addClass("col-md-1");
+			div.addClass("col-md-3");
 			div.css("margin:20px;");
 
 			var pictureBox = $("<img>");
@@ -29,10 +35,8 @@ var SelectDish = function (container,model) {
 			textDesc.html(desc);
 			div.append(textDesc);
 
-			container.append(div);
-	}
-
-	this.selectDish = container.find("#selectDish");
+			pictureBoxTag.append(div);
+		}
 
 	
 

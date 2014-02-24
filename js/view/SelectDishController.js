@@ -1,7 +1,9 @@
 var SelectDishController = function(view, model ) {
 
-	view.selectDish.click(function(event) { 
-		//alert("hello");
+	//console.log(view.imageBox.end());
+
+	view.imageBox.click(function(event) { 
+		alert("hello");
 /*
 		var array = model.getAllIngredients();
 		var all = "";
