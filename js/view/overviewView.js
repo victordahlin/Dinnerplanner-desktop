@@ -4,14 +4,15 @@ var OverviewView = function (container,model) {
 
 	model.addDishToMenu(2);
 	model.addDishToMenu(100);
+	model.addDishToMenu(200);
 	var array = model.getFullMenu();
 	for( var i = 0; i < array.length; i++ ) {
 		var div = $("<div>");
 		if (i==0){
-			div.addClass("col-md-1 col-md-offset-1");
+			div.addClass("col-md-2 col-md-offset-1");
 		}
 		else {
-			div.addClass("col-md-1");
+			div.addClass("col-md-2");
 		}
 		
 		div.attr("id", "dish");
@@ -44,7 +45,7 @@ var OverviewView = function (container,model) {
 	}
 	var div = $("<div>");
 	div.html("Total menu price:");
-	div.addClass("col-md-1");
+	div.addClass("col-md-2");
 	//div.css("border-left", "3px solid black");
 	div.attr("id","thePriceisRight");
 	div.attr("width", "120");
