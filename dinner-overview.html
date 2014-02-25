@@ -7,64 +7,18 @@
 <title>HOMELETTE</title>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-<<<<<<< HEAD
+
 <link rel="stylesheet" href="style.css">
-<style>
 
-</style>
-
-=======
->>>>>>> External Changes
-=======
->>>>>>> d69914e1cde48efeeadf79255ee78ded4401d1c8
-<style type="text/css">
-#myDinner_row{
-	padding-top: 50px;
-	height: 250px;
-	margin:10px
-}
-#myDinner_top{
-	background-color:#FFD685;
-	margin:10px
-}
-#goBack{
-	margin-top: 20px;
-	background-color:#FFCC66
-}
-#jumboText{
-	margin-top:50px;
-}
-#nextPage{
-	margin-top: 50px;
-	background-color:#FFCC66
-}
-#thePriceisRight{
-	margin:20px;
-	padding-top:130px;
-	border-left: 3px solid black;
-}
-b{
-	color: red;
-
-}
-#dish{
-	text-align: right;
-	margin:5px;
-}
-#myDinner_top{
-	margin:10px;
-	border-top: 3px solid black
-}
-</style>
 </head>
 
 <body>
 <div class="jumbotron">
 	<div class="row">
-	<div class="col-md-3">
+	<div class="col-md-5">
 		<h1>HOMELETTE</h1>
 	</div>
-	<div class="col-md-8">
+	<div class="col-md-7">
 		<p id="jumboText">For the best chefs in the world directly into your kitchen</p>
 	</div>
 	</div>
@@ -74,8 +28,8 @@ b{
 
 
 <div id="myDinner_top" class="row">
-	<div class="col-md-4 col-md-offset-1">
-		<h1>My dinner: 4 people</h1>
+	<div class="col-md-5">
+		<div id="myDinner_Header"></div>
 	</div>	
 	<div class="col-md-2 col-md-offset-4" >
 		<button id="goBack" class="btn">Go back and edit dinner</button>
@@ -84,7 +38,7 @@ b{
 
 
 <div id="myDinner_choices">
-	<div class="row" id="myDinner_row1">
+	<div  id="myDinner_row1" class="row">
 
 
 	</div>
@@ -107,8 +61,10 @@ b{
 <!-- The application JavaScript code -->
 <script src="js/app.js"></script>
 <script src="js/model/dinnerModel.js"></script>
+
 <script src="js/view/overviewView.js"></script>
 <script src="js/view/overviewViewController.js"></script>
+
 <script src="js/view/dinnerPrep.js"></script>
 <script src="js/view/dinnerPrepController.js"></script>
 
@@ -117,8 +73,6 @@ b{
 
 <script src="js/view/exampleView.js"></script>
 <script src="js/view/exampleViewController.js"></script>
-<script src="js/view/selectDish.js"></script>
-<script src="js/view/selectDishController.js"></script>
-<script src="js/view/dinnerPrep.js"></script>
+
 </body>
 </html>

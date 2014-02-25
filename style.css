@@ -30,4 +30,44 @@
 	border: 5px solid black;
 }
 
+#myDinner_row1{
+	padding-top: 50px;
+	height: 250px;
+	margin:10px
+}
+#myDinner_top{
+	background-color:#FFD685;
+	margin:10px
+}
+#goBack{
+	margin-top: 20px;
+	background-color:#FFCC66
+}
+#jumboText{
+	margin-top:50px;
+}
+#nextPage{
+	margin-top: 50px;
+	background-color:#FFCC66
+}
+#thePriceisRight{
+	margin:20px;
+	padding-top:115px;
+	border-left: 3px solid black;
+
+}
+#boldText{
+	color: red
+}
+#totalPrice{
+	color: red
+}
+#dish{
+	text-align: right;
+	margin:5px
+}
+#myDinner_row2{
+	margin:10px;
+	border-top: 3px solid black
+}
 /***************************/

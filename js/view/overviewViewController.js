@@ -2,10 +2,17 @@
 var OverviewViewController = function(view, model ) {
 
 	$("#dinnerPrep").hide();
-	
+	var page = "myDinner";
 	view.goBackButton.click(
 		function(){
-			console.log("goback");
+			if (page == "myDinner"){
+				console.log("goback");
+			}
+			else{
+				$("#dinnerPrep").hide();
+				$("#myDinner_choices").show();
+				page = "myDinner";
+			}			
 		}
 	);
 		
@@ -13,7 +20,7 @@ var OverviewViewController = function(view, model ) {
 		function(){
 			$("#myDinner_choices").hide();
 			$("#dinnerPrep").show();
-			
+			page = "dinnerPrep";
 		}
 	);
 }
