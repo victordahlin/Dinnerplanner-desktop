@@ -5,10 +5,7 @@ var OverviewView = function (container,model) {
 	this.nextPageButton = container.find("#nextPage");
 	this.myDinner = container.find("#myDinner_choices");
 	this.dinnerPrep = container.find("#dinnerPrep");
-	
-	//model.addDishToMenu(2);
-	//model.addDishToMenu(100);
-	//model.addDishToMenu(200);
+
 	var array = model.getFullMenu();
 	for( var i = 0; i < array.length; i++ ) {
 		var div = $("<div>");
