@@ -1,0 +1,33 @@
+
+/*****dinner preparation*****/
+
+#rowID{
+    overflow: hidden; 
+	padding: 30px;
+}
+#firstColumn{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+#secondColumn{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+#thirdColumn{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+#prepTitle{
+	margin-bottom: 20px;
+	margin-top:25px;
+	
+}
+#dishTitle{
+	margin-bottom:20px;
+}
+#pictureBox{
+	margin-top: 30px;
+	border: 5px solid black;
+}
+
+/***************************/
