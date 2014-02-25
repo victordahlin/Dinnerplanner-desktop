@@ -15,6 +15,7 @@ var LeftView = function (container,model) {
 		var nrofGuests = model.getNumberOfGuests();
 		var selDishes = model.getFullMenu();
 		if(selDishes.length == 0){
+			this.selDishDiv.html("");
 			var pending=$("<span>");
 			pending.addClass("dishname"); 
 			pending.html("Pending");
@@ -25,6 +26,8 @@ var LeftView = function (container,model) {
 		}else{
 			this.selDishDiv.html("");
 			for (var d in selDishes){
+				var dishdiv = $("<div>");
+				dishdiv.addClass("selDishRow");
 				var dishname=$("<span>");
 				dishname.addClass("dishname");				
 				dishname.text(selDishes[d].name);
@@ -39,8 +42,10 @@ var LeftView = function (container,model) {
 				dishcost.html(cost);
 				var removeBtn= $("<button>");
 				removeBtn.attr("id", selDishes[d].id);
+				removeBtn.addClass("rmBtn");
 				removeBtn.text("x");
-				this.selDishDiv.append(dishname,dishcost,removeBtn,"<br>");
+				dishdiv.append(dishname,dishcost,removeBtn,"<br>");
+				this.selDishDiv.append(dishdiv);
 			}
 		}
 	}

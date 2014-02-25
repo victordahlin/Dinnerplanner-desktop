@@ -103,6 +103,25 @@ input#numberOfGuests {
 	border-bottom: 1px solid #000;
 }
 
+.selDishRow{
+	border: 1px solid #000;
+}
+.dishname {	
+
+
+}
+
+.dishcost{	
+
+}
+
+.rmBtn{	
+	height:15px;
+	width:15px;
+}
+
+
+
 #cost {
 	margin-left: 50px;
 } 
