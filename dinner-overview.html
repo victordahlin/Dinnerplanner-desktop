@@ -7,20 +7,15 @@
 <title>HOMELETTE</title>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-<<<<<<< Local Changes
-<style>
-
-</style>
-
-=======
->>>>>>> External Changes
 <style type="text/css">
 #myDinner_row{
 	padding-top: 50px;
-	height: 250px
+	height: 250px;
+	margin:10px
 }
 #myDinner_top{
-	background-color:#FFD685
+	background-color:#FFD685;
+	margin:10px
 }
 #goBack{
 	margin-top: 20px;
@@ -46,8 +41,9 @@ b{
 	text-align: right;
 	margin:5px;
 }
-.row{
+#myDinner_top{
 	margin:10px;
+	border-top: 3px solid black
 }
 </style>
 </head>
@@ -78,12 +74,12 @@ b{
 
 
 <div id="myDinner_choices">
-	<div class="row" id="myDinner_row">
+	<div class="row" id="myDinner_row1">
 
 
 	</div>
 
-	<div class="row" style="border-top: 3px solid black">
+	<div id="myDinner_row2" class="row">
 		<div class="col-md-2 col-md-offset-5" >
 			<button id="nextPage" class="btn" style="background-color:#FFCC66;"><h3>Print Full Recipe</h3></button>
 		</div>
