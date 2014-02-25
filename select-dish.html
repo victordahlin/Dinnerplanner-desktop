@@ -15,16 +15,16 @@
 <h2>HOMELETTE</h2>
 	<p>For the best chefs in the world directly into your kitchen</p>
 </div>
-<div id="leftView" class="col-md-1">
+<div id="leftView" class="col-md-2">
 	<h3>My Dinner</h3>
-	<label>People</label><input type="number" id="numberOfGuests" value=3>
-	<div id="headers">
-		<span id="dishname">Dish name</span>
-		<span id="cost">Cost</span>	
-	</div>
-	<div id="selectedDishes"></div>
+	<label>People</label><input type="number" id="numberOfGuests" value=3 width="20">
+	<table id="selectedDishes" class="table table-condensed">
+	</table>
+	
 	<hr>
-	<div id="totalCostdiv">SEK<span id="totalPrice"></span></div>
+	<div id="totalCostdiv">
+	SEK <span id="totalPrice"></span>
+	</div>
 	<button id="finConfirmBtn">Confirm Dinner</button>
 </div>
 

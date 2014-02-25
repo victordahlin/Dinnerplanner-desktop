@@ -16,36 +16,42 @@ var LeftView = function (container,model) {
 		var selDishes = model.getFullMenu();
 		if(selDishes.length == 0){
 			this.selDishDiv.html("");
-			var pending=$("<span>");
-			pending.addClass("dishname"); 
+			var headtr = $("<tr>");
+			headtr.addClass("headTR");
+			headtr.append("<th>Dish name</th><th>Cost</th><th></th>");
+			this.selDishDiv.append(headtr);
+			var pendingtr = $("<tr>");				
+			var pending=$("<td>");
 			pending.html("Pending");
-			var pendcost=$("<span>");
-			pendcost.addClass("dishcost");
+			var pendcost=$("<td>");			
 			pendcost.html("0");
-			this.selDishDiv.append(pending, pendcost);
+			pendingtr.append(pending, pendcost);
+			this.selDishDiv.append(pendingtr);
 		}else{
 			this.selDishDiv.html("");
+			var headtr = $("<tr>");
+			headtr.addClass("headTR");
+			headtr.append("<th>Dish name</th><th>Cost</th><th></th>");
+			this.selDishDiv.append(headtr);
 			for (var d in selDishes){
-				var dishdiv = $("<div>");
-				dishdiv.addClass("selDishRow");
-				var dishname=$("<span>");
-				dishname.addClass("dishname");				
-				dishname.text(selDishes[d].name);
+				var tr = $("<tr>");
+				var dishname=$("<td>");
+				dishname.html(selDishes[d].name);
 				
-				var dishcost=$("<span>");
-				dishcost.addClass("dishcost");
+				var dishcost=$("<td>");				
 				var cost = 0;
 				var ingredients = selDishes[d].ingredients;
 				for (var i in ingredients){
 					cost = cost + ingredients[i].price*nrofGuests;
 				}
 				dishcost.html(cost);
+				var buttontd = $("<td>");	
 				var removeBtn= $("<button>");
 				removeBtn.attr("id", selDishes[d].id);
-				removeBtn.addClass("rmBtn");
 				removeBtn.text("x");
-				dishdiv.append(dishname,dishcost,removeBtn,"<br>");
-				this.selDishDiv.append(dishdiv);
+				buttontd.append(removeBtn);
+				tr.append(dishname,dishcost,buttontd);
+				this.selDishDiv.append(tr);
 			}
 		}
 	}
