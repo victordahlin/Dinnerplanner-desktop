@@ -1,6 +1,7 @@
 var DinnerPrep = function (container,model) {
 	
-	var menuArray = model.getDishes(); //ska vara getFullMenu
+	var menuArray = model.getFullMenu(); //ska vara getFullMenu
+	console.log(menuArray);
 	
 	this.dinnerPrep = container.find("#dinnerPrep");
 	

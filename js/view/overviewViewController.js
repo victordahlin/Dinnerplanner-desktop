@@ -1,11 +1,19 @@
 //ExampleViewController Object constructor
 var OverviewViewController = function(view, model ) {
 
-	/*view.plusButton.click(function(){
-		model.setNumberOfGuests(model.getNumberOfGuests() + 1);
-	});
+	$("#dinnerPrep").hide();
 	
-	view.minusButton.click(function(){
-		model.setNumberOfGuests(model.getNumberOfGuests() - 1);
-	});*/
+	view.goBackButton.click(
+		function(){
+			console.log("goback");
+		}
+	);
+		
+	view.nextPageButton.click(
+		function(){
+			$("#myDinner_choices").hide();
+			$("#dinnerPrep").show();
+			
+		}
+	);
 }
