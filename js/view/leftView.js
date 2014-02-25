@@ -47,7 +47,9 @@ var LeftView = function (container,model) {
 				dishcost.html(cost);
 				var buttontd = $("<td>");	
 				var removeBtn= $("<button>");
-				removeBtn.attr("id", selDishes[d].id);
+				removeBtn.attr("id", "rmBtn");
+				removeBtn.attr("value", selDishes[d].id);
+				removeBtn.addClass("btn btn-danger btn-xs");
 				removeBtn.text("x");
 				buttontd.append(removeBtn);
 				tr.append(dishname,dishcost,buttontd);

@@ -6,8 +6,8 @@ var LeftViewController = function(view, model ) {
 	});
 	
 	this.updateRemoveBtn = function(){	
-	$(".rmBtn").click(function(){
-		var clickedID = $(this).attr('id');
+	$("#rmBtn").click(function(){
+		var clickedID = $(this).val();
 		model.removeDishFromMenu(clickedID);
 	});	
 	}
