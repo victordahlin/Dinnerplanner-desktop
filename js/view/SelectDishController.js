@@ -15,6 +15,7 @@ var SelectDishController = function(view, model ) {
 		var dishIngredients = dish.ingredients; // array
 
 		view.test(dishID, dishName, dishImage, dishDesc, dishIngredients);
+		updateConfirmButton();
 
 		// Show dishes and set #showDish div tag empty
 			$(".backButton").click(function(event) {
@@ -43,6 +44,17 @@ var SelectDishController = function(view, model ) {
 		filterFn();
 		pickDish();
 	});
+	
+	//confirm dish button click handler
+	var updateConfirmButton = function(){
+	view.rightConfirmButton.click(function(event){
+		var clickedID = $(this).attr('id');
+		model.addDishToMenu(clickedID); //add to selected dishes
+		$("#searchDish").show();
+		$("#picture-box").show();
+		$("#showDish").html("");		
+	});
+	}
 
 
 	pickDish();

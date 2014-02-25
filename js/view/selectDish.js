@@ -6,8 +6,9 @@ var SelectDish = function (container,model) {
 	this.imageBox = container.find("div");
 	this.filterDD = container.find("#courseSel");
 	this.searchBtn = container.find("#searchBtn");
+	this.rightConfirmButton = $("<button>");
 	var array = model.getAllDishes().end();
-	console.log(array);
+	//console.log(array);
 	//console.log(this.imageBox); debug	
 	
 	this.fillDishContainer = function(type, filter){
@@ -103,10 +104,10 @@ var SelectDish = function (container,model) {
 		var breakLine = $("<hr>")
 		right.append(breakLine);
 		
-		var rightConfirmButton = $("<button>");
-		rightConfirmButton.html("Confirm Dish");
-		rightConfirmButton.addClass("confirmButton");
-		right.append(rightConfirmButton);
+		this.rightConfirmButton.html("Confirm Dish");
+		this.rightConfirmButton.attr("id", dishID);
+		this.rightConfirmButton.addClass("confirmButton");
+		right.append(this.rightConfirmButton);
 		
 		masterDiv.append(right);
 
@@ -115,7 +116,6 @@ var SelectDish = function (container,model) {
 	}
 	
 	this.fillDishContainer("all");
-	//this.fillDishContainer("starter");
 
 	/*****************************************  
 	      Observer implementation    

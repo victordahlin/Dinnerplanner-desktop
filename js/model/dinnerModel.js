@@ -1,11 +1,9 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
  
-	var menu = [];
+	var menu = []; 
 	var numberOfGuests =3; //set default number of guests
-	menu['starter'] = 1; //set a starter to the menu, to use for testing
-
-
+	
 	this.setNumberOfGuests = function(num) {
 		if(num>0) {
 			numberOfGuests = num;
@@ -55,6 +53,7 @@ var DinnerModel = function() {
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		menu[this.getDish(id).type] = id; 
+		notifyObservers();
 	}
 
 	//Removes dish from menu
