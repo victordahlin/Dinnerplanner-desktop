@@ -62,9 +62,9 @@ var OverviewView = function (container,model) {
 	dinnerRow.append(div);
 	this.totalPrice.html(model.getTotalMenuPrice() + " SEK");
 
-	this.h1 = $("<h1>");
-	this.header.append(this.h1);
-	this.h1.html("My dinner: " + model.getNumberOfGuests() + " people");
+	this.numberOfGuests = $("<h1>");
+	this.header.append(this.numberOfGuests);
+	this.numberOfGuests.html("My dinner: " + model.getNumberOfGuests() + " people");
 	
 	
 	/*****************************************  
