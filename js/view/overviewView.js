@@ -1,14 +1,14 @@
 //ExampleView Object constructor
 var OverviewView = function (container,model) {
-	var dinnerRow = $(container.find("#myDinner_row"));
+	var dinnerRow = $(container.find("#myDinner_row1"));
 	this.goBackButton = container.find("#goBack");
 	this.nextPageButton = container.find("#nextPage");
 	this.myDinner = container.find("#myDinner_choices");
 	this.dinnerPrep = container.find("#dinnerPrep");
+	this.header = container.find("#myDinner_Header");
 	
-	//model.addDishToMenu(2);
-	//model.addDishToMenu(100);
-	//model.addDishToMenu(200);
+	
+
 	var array = model.getFullMenu();
 	for( var i = 0; i < array.length; i++ ) {
 		var div = $("<div>");
@@ -41,6 +41,7 @@ var OverviewView = function (container,model) {
 		
 		price = price*model.getNumberOfGuests();
 		var dishPrice = $("<b>");
+		dishPrice.attr("id","boldText");
 		dishPrice.html(price + " SEK");
 		div.append(dishPrice);
 
@@ -50,7 +51,6 @@ var OverviewView = function (container,model) {
 	var div = $("<div>");
 	div.html("Total menu price:");
 	div.addClass("col-md-2");
-	//div.css("border-left", "3px solid black");
 	div.attr("id","thePriceisRight");
 	div.attr("width", "120");
 	div.attr("height", "120");
@@ -59,12 +59,13 @@ var OverviewView = function (container,model) {
 	this.totalPrice.attr("id","totalPrice");
 	div.append(this.br);
 	div.append(this.totalPrice);
-	//finally we add the div to the view container
 	dinnerRow.append(div);
-	
-	//Set the inital values of the components
-	//this.numberOfGuests.html(model.getNumberOfGuests());
 	this.totalPrice.html(model.getTotalMenuPrice() + " SEK");
+
+	this.numberOfGuests = $("<h1>");
+	this.header.append(this.numberOfGuests);
+	this.numberOfGuests.html("My dinner: " + model.getNumberOfGuests() + " people");
+	
 	
 	/*****************************************  
 	      Observer implementation    
@@ -79,4 +80,3 @@ var OverviewView = function (container,model) {
 		this.totalPrice.html(model.getTotalMenuPrice());
 	}
 }
- 

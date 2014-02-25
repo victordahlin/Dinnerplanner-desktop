@@ -19,6 +19,8 @@ var DinnerPrep = function (container,model) {
 		var pictureBox = $("<img>");
 		var file = "images/" + menuArray[i].image;
 		pictureBox.attr("src",file);
+		pictureBox.attr("id","pictureBox");
+		
 		pictureBox.addClass("col-md-offset-2");
 
 		firstColumn.append(pictureBox);
@@ -30,6 +32,8 @@ var DinnerPrep = function (container,model) {
 		
 		var name = menuArray[i].name;
 		var titleText = $("<h3>");
+		titleText.attr("id","dishTitle");
+		
 		titleText.html(name);
 		
 		var ingredients = menuArray[i].ingredients;		
@@ -50,6 +54,7 @@ var DinnerPrep = function (container,model) {
 		thirdColumn.attr("id","thirdColumn");;
 		
 		var prepTitle = $("<h4>");
+		prepTitle.attr("id","prepTitle");
 		prepTitle.html("Preparations");
 		
 		var desc = menuArray[i].description;
