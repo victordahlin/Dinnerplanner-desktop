@@ -6,13 +6,17 @@ var SelectDish = function (container,model) {
 	this.imageBox = container.find("div");
 	this.filterDD = container.find("#courseSel");
 	this.searchBtn = container.find("#searchBtn");
+	var array = model.getAllDishes().end();
+	console.log(array);
 	//console.log(this.imageBox); debug
 	
 	this.fillDishContainer = function(type, filter){
 		pictureBoxTag.empty();
 	// Temp for getting dishes 
-		var array = model.getAllDishes(type, filter);
-		//console.log(array);	
+		if(type){
+		array = model.getAllDishes(type, filter);
+		}
+		console.log(array);	
 	
 	// Create <div class="col-md-3"<img src="X" width=X height=Y></img>
 		for( var i = 0; i < array.length; i++ ) {
@@ -46,7 +50,7 @@ var SelectDish = function (container,model) {
 			// Set all HTML tags to the #picture-box in #selectDish
 			pictureBoxTag.append(div);
 		}
-		new SelectDishController(this,model);
+		//new SelectDishController(this,model);
 	}
 
 	this.test = function(dishID, dishName, dishImage, dishDesc, dishIngredients) {
@@ -109,7 +113,8 @@ var SelectDish = function (container,model) {
 		$("#showDish").append(masterDiv);
 	}
 	
-	this.fillDishContainer("starter");
+	this.fillDishContainer();
+	//this.fillDishContainer("starter");
 
 	/*****************************************  
 	      Observer implementation    

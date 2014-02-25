@@ -35,6 +35,7 @@ var SelectDishController = function(view, model ) {
 
 		// Show dishes and set #showDish div tag empty
 		$(".backButton").click(function(event) {
+			$("#searchDish").show();
 			$("#picture-box").show();
 			$("#showDish").html("");
 		});
