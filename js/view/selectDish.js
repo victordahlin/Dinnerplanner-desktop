@@ -13,7 +13,9 @@ var SelectDish = function (container,model) {
 	this.fillDishContainer = function(type, filter){
 		pictureBoxTag.empty();
 	// Temp for getting dishes 
-		if(type){
+		if(type=="all"){
+			array = model.getAllDishes().end();
+		}else{
 			array = model.getAllDishes(type, filter);
 		}
 		//console.log(array);	
@@ -112,7 +114,7 @@ var SelectDish = function (container,model) {
 		$("#showDish").append(masterDiv);
 	}
 	
-	this.fillDishContainer();
+	this.fillDishContainer("all");
 	//this.fillDishContainer("starter");
 
 	/*****************************************  

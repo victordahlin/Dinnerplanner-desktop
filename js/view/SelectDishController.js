@@ -1,6 +1,7 @@
 var SelectDishController = function(view, model ) {
 
 	var pickDish = function() {
+	//set click handlers to all recently filtered dishes.
 		$(".col-md-3").click(function(event) { 
 		$("#searchDish").hide();
 		$("#picture-box").hide();
