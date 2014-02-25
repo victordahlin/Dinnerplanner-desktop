@@ -1,5 +1,5 @@
 var SelectDish = function (container,model) {	
-
+	
 	// Get picture box to apply new dishes
 	var pictureBoxTag = container.find("#picture-box");
 	// Get image box to set click handler
@@ -8,7 +8,7 @@ var SelectDish = function (container,model) {
 	this.searchBtn = container.find("#searchBtn");
 	var array = model.getAllDishes().end();
 	console.log(array);
-	//console.log(this.imageBox); debug
+	//console.log(this.imageBox); debug	
 	
 	this.fillDishContainer = function(type, filter){
 		pictureBoxTag.empty();
@@ -16,9 +16,8 @@ var SelectDish = function (container,model) {
 		if(type){
 		array = model.getAllDishes(type, filter);
 		}
-		console.log(array);	
-	
-	// Create <div class="col-md-3"<img src="X" width=X height=Y></img>
+		//console.log(array);	
+	//Create <div class="col-md-3"<img src="X" width=X height=Y></img>
 		for( var i = 0; i < array.length; i++ ) {
 			var div = $("<div>");
 			var dishID = array[i].id;
