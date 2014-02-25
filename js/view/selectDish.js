@@ -17,7 +17,9 @@ var SelectDish = function (container,model) {
 	// Create <div class="col-md-3"<img src="X" width=X height=Y></img>
 		for( var i = 0; i < array.length; i++ ) {
 			var div = $("<div>");
+			var dishID = array[i].id;
 			div.addClass("col-md-3");
+			div.attr("id", dishID);
 			div.css("margin:20px;");
 
 			var imageTag = $("<img>");
