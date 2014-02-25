@@ -14,7 +14,7 @@ var SelectDish = function (container,model) {
 		pictureBoxTag.empty();
 	// Temp for getting dishes 
 		if(type){
-		array = model.getAllDishes(type, filter);
+			array = model.getAllDishes(type, filter);
 		}
 		console.log(array);	
 	
