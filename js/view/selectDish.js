@@ -46,6 +46,7 @@ var SelectDish = function (container,model) {
 			// Set all HTML tags to the #picture-box in #selectDish
 			pictureBoxTag.append(div);
 		}
+		new SelectDishController(this,model);
 	}
 
 	this.test = function(dishID, dishName, dishImage, dishDesc, dishIngredients) {

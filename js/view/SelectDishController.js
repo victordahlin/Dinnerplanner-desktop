@@ -19,6 +19,7 @@ var SelectDishController = function(view, model ) {
 
 
 	$(".col-md-3").click(function(event) { 
+		$("#searchDish").hide();
 		$("#picture-box").hide();
 		
 		var clickedID = $(this).attr('id');

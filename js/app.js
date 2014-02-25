@@ -13,7 +13,7 @@ $(function() {
 
 	// Controllers
    	var exampleViewController = new ExampleViewController(exampleView,model);
-   	var selectDishController = new SelectDishController(selectDish,model);
+   	//var selectDishController = new SelectDishController(selectDish,model);
 	//var overviewViewController = new OverviewViewController(overviewView,model);
 	//var dinnerPrepController = new DinnerPrepController(dinnerPrep,model);
 });
