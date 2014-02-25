@@ -70,6 +70,7 @@ var SelectDish = function (container,model) {
 		left.append(dishText);
 
 		var leftBackButton = $("<button>");
+		leftBackButton.addClass("backButton");
 		leftBackButton.html("back to Select Dish");
 		left.append(leftBackButton);
 
@@ -95,9 +96,12 @@ var SelectDish = function (container,model) {
 
 		var breakLine = $("<hr>")
 		right.append(breakLine);
+		
 		var rightConfirmButton = $("<button>");
 		rightConfirmButton.html("Confirm Dish");
+		rightConfirmButton.addClass("confirmButton");
 		right.append(rightConfirmButton);
+		
 		masterDiv.append(right);
 
 		// Set all HTML tags to the #picture-box in #selectDish

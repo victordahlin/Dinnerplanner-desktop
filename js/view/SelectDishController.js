@@ -30,5 +30,14 @@ var SelectDishController = function(view, model ) {
 		var dishIngredients = dish.ingredients; // array
 
 		view.test(dishID, dishName, dishImage, dishDesc, dishIngredients);
+
+
+		// Show dishes and set #showDish div tag empty
+		$(".backButton").click(function(event) {
+			$("#picture-box").show();
+			$("#showDish").html("");
+		});
 	});
+
+
 }
