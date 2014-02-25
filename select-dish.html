@@ -7,6 +7,7 @@
 <title>HOMELETTE</title>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -14,20 +15,16 @@
 <h2>HOMELETTE</h2>
 	<p>For the best chefs in the world directly into your kitchen</p>
 </div>
-<div id="leftView" class="col-md-2">
+<div id="leftView" class="col-md-1">
 	<h3>My Dinner</h3>
-	People 
-	<input type="number" id="numberOfGuests" value=3>
+	<label>People</label><input type="number" id="numberOfGuests" value=3>
 	<div id="headers">
 		<span id="dishname">Dish name</span>
 		<span id="cost">Cost</span>	
 	</div>
-	<div id="selectedDishes">
-	</div>
+	<div id="selectedDishes"></div>
 	<hr>
-	<div id="totalCostdiv">
-	SEK <span id="totalPrice"></span>
-	</div>
+	<div id="totalCostdiv">SEK<span id="totalPrice"></span></div>
 	<button id="finConfirmBtn">Confirm Dinner</button>
 </div>
 

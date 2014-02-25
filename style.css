@@ -71,3 +71,43 @@
 	border-top: 3px solid black
 }
 /***************************/
+
+#leftView {
+	margin:0;
+	padding:0;
+}
+
+#leftView h3, p, #dishname, #selectedDishes,label {
+	margin-left: 10px;
+}
+
+#leftView label {
+	font-weight: normal;
+	margin-right: 10px;
+}
+
+input#numberOfGuests {
+	width: 20%;
+}
+
+/* Select-dish */
+.jumbotron {
+	border-bottom: 3px solid #000;
+	margin-bottom: 0;
+}
+
+#headers {
+	width: 115%;
+	background-color: #C0C0C0;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+#cost {
+	margin-left: 50px;
+} 
+
+#selectDish {
+	margin-left:20px;
+	border-left: 3px solid #000;
+}
