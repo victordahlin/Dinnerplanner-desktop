@@ -30,6 +30,8 @@
 	border: 5px solid black;
 }
 
+/*****overview*******/
+
 #myDinner_row1{
 	padding-top: 50px;
 	height: 250px;
@@ -37,7 +39,8 @@
 }
 #myDinner_top{
 	background-color:#FFD685;
-	margin:10px
+	border-bottom: 3px solid black;
+	
 }
 #goBack{
 	margin-top: 20px;
@@ -56,6 +59,15 @@
 	border-left: 3px solid black;
 
 }
+#dishName{
+	border:2px solid black;
+	margin:0;
+	margin-bottom: 10px;
+	background-color:gray;
+}
+#dishPicture{
+	border:2px solid black;
+}
 #boldText{
 	color: red
 }
@@ -64,7 +76,8 @@
 }
 #dish{
 	text-align: right;
-	margin:5px
+	margin:5px;
+	width:150px;
 }
 #myDinner_row2{
 	margin:10px;
@@ -195,4 +208,33 @@ p.singleDishTitle {
 p.singleDishDesc {
 	margin:0;
 	margin-bottom: 10px;
+}
+
+/****home******/
+
+
+body{
+ 	background-image:url('images/FamilyEnjoyingaMeal.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-margin-top:20px;
+}
+
+#startBox{
+	margin-left:20px;
+	margin-top:100px;
+	padding:0px 50px 20px 50px;
+	background:rgba(255, 255, 255, 0.5);
+}
+
+#startBox h2{
+	border-bottom:2px solid black;
+}
+#startJumbo{
+	background:rgba(255, 240, 134, 0.6);
+	
+}
+#startButton{
+	background-color:#FFCC66;
+	border:2px solid black;
 }

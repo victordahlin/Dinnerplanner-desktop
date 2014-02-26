@@ -1,12 +1,9 @@
 //ExampleView Object constructor
 var OverviewView = function (container,model) {
 	var dinnerRow = $(container.find("#myDinner_row1"));
-	this.goBackButton = container.find("#goBack");
 	this.nextPageButton = container.find("#nextPage");
 	this.myDinner = container.find("#myDinner_choices");
 	this.dinnerPrep = container.find("#dinnerPrep");
-	this.header = container.find("#myDinner_Header");
-	
 	
 
 	var array = model.getFullMenu();
@@ -22,7 +19,7 @@ var OverviewView = function (container,model) {
 		div.attr("id", "dish");
 		var pictureBox = $("<img>");
 		var file = "images/" + array[i].image;
-
+		pictureBox.attr("id","dishPicture");		
 		pictureBox.attr("src",file);
 		pictureBox.attr("width", "120");
 		pictureBox.attr("height", "120");
@@ -30,6 +27,7 @@ var OverviewView = function (container,model) {
 
 		var name = array[i].name;
 		var textTitle = $("<p>");
+		textTitle.attr("id","dishName");
 		textTitle.html(name);
 		div.append(textTitle);
 
@@ -62,9 +60,7 @@ var OverviewView = function (container,model) {
 	dinnerRow.append(div);
 	this.totalPrice.html(model.getTotalMenuPrice() + " SEK");
 
-	this.numberOfGuests = $("<h1>");
-	this.header.append(this.numberOfGuests);
-	this.numberOfGuests.html("My dinner: " + model.getNumberOfGuests() + " people");
+
 	
 	
 	/*****************************************  

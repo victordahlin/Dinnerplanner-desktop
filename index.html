@@ -1,38 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Basic Drawing App</title>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HOMELETTE</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+</head>
 
-  </head>
-  <body>
-	<div class="container">
-		<h1>Dinner planner</h1>
-		<div id="exampleView">
-			<div>
-				Number of guest <span id="numberOfGuests"></span>
-			</div>
-			<div>
-				<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-			    <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+
+<body>
+<!-- JUMBOTRON -->	
+<div class="jumbotron" id="startJumbo">
+	<p class="jumboLeft">HOMELETTE</p>
+	<p class="jumboRight">For the best chefs in the world directly into your kitchen</p>
+</div>
+
+<!-- HOME -->	
+
+<div id="homeView">
+	<div class="row">
+		<div class="col-md-6" id="startBox">
+				<h2>A home dinner service </h2>
+			
+				<p>LLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dui massa, id dapibus enim iaculis eu. Quisque suscipit consequat velit eget ultricies. Donec vitae mauris consequat, interdum mi eu, congue eros.</p>
+				<br/>
+				<p>Start quickly</p>
+				<button type="button" class="btn" id="startButton"><b>Create dinner</b></button>	
+		</div>
+	</div>
+</div>
+
+
+
+<!-- LEFT VIEW -->	
+
+<!-- SELECT DISH -->	
+
+<!-- TOP VIEW -->
+<div id="topView">
+	<div id="myDinner_top" class="row">
+		<div class="col-md-5">
+			<div id="myDinner_Header"></div>
+		</div>	
+		<div class="col-md-2 col-md-offset-4" >
+			<button id="goBack" class="btn">Go back and edit dinner</button>
+		</div>
+	</div>
+</div>
+
+<!-- OVERVIEW -->	
+<div id="overviewView">
+	<div id="myDinner_choices">
+		<div  id="myDinner_row1" class="row">
+		</div>
+
+		<div id="myDinner_row2" class="row">
+			<div class="col-md-2 col-md-offset-5" >
+				<button id="nextPage" class="btn" style="background-color:#FFCC66;"><h3>Print Full Recipe</h3></button>
 			</div>
 		</div>
 	</div>
+</div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
-	<!-- The application JavaScript code -->
-	<script src="js/app.js"></script>
-	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-	<script src="js/view/exampleViewController.js"></script>
-  </body>
+<!-- DINNER PREP -->	
+
+<div id="dinnerPrep" class=".container-fluid"></div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<!-- The application JavaScript code -->
+<script src="js/app.js"></script>
+<script src="js/model/dinnerModel.js"></script>
+
+<script src="js/view/overviewView.js"></script>
+<script src="js/view/overviewViewController.js"></script>
+
+<script src="js/view/dinnerPrep.js"></script>
+<script src="js/view/dinnerPrepController.js"></script>
+
+<script src="js/view/selectDish.js"></script>
+<script src="js/view/selectDishController.js"></script>
+
+<script src="js/view/leftView.js"></script>
+<script src="js/view/leftViewController.js"></script>
+
+<script src="js/view/homeView.js"></script>
+<script src="js/view/homeViewController.js"></script>
+
+<script src="js/view/topView.js"></script>
+<script src="js/view/topViewController.js"></script>
+
+</body>
 </html>
