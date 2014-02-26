@@ -8,8 +8,8 @@ var SelectDish = function (container,model) {
 	this.searchBtn = container.find("#searchBtn");
 	this.rightConfirmButton = $("<button>");
 	var array = model.getAllDishes().end();
-	//console.log(array);
-	//console.log(this.imageBox); debug	
+	//console.log(this.imageBox); 
+
 	
 	this.fillDishContainer = function(type, filter){
 		pictureBoxTag.empty();
@@ -28,7 +28,7 @@ var SelectDish = function (container,model) {
 			div.attr("id", dishID);
 
 			var imageTag = $("<img>");
-			var file = "images/" + array[i].image; 
+			var file = "images/" + array[i].image;
 			imageTag.attr("src",file);
 			imageTag.attr("width", "120");
 			imageTag.attr("height", "120");
@@ -56,11 +56,12 @@ var SelectDish = function (container,model) {
 		//new SelectDishController(this,model);
 	}
 
-	this.test = function(dishID, dishName, dishImage, dishDesc, dishIngredients) {
-				var masterDiv = $("<div>");
+	this.showSingleDish = function(dishID, dishName, dishImage, dishDesc, dishIngredients) {
+		var masterDiv = $("<div>");
 
 		var left = $("<div>");
 		left.addClass("col-md-4");
+		left.attr("id", "singleDishLeftBox");
 
 		var title = $("<h2>");
 		title.html(dishName);
@@ -68,12 +69,14 @@ var SelectDish = function (container,model) {
 
 		var imageTag = $("<img>");
 		var file = "images/" + dishImage;
+		imageTag.addClass("dishImage");
 		imageTag.attr("src",file);
 		imageTag.attr("width", "120");
 		imageTag.attr("height", "120");
 		left.append(imageTag);
 
 		var dishText = $("<p>");
+		dishText.html(dishDesc);
 		left.append(dishText);
 
 		var leftBackButton = $("<button>");
@@ -86,21 +89,24 @@ var SelectDish = function (container,model) {
 
 		var right = $("<div>");
 		right.addClass("col-md-6");
+		right.attr("id", "singleDishRightBox");
 		var dishIngrTotal = $("<h3>");
 		dishIngrTotal.html("Ingredients for " + model.getNumberOfGuests() + " people<hr>");
 		right.append(dishIngrTotal);
-
+		var dishPrice = 0;
+		var ingrTable = $("<table>");
+		ingrTable.addClass("table table-condensed")
 		for(key in dishIngredients) {
-			var singleIngredient = $("<p>");
+			var singleIngredient = $("<tr>");
 			var ingrName = dishIngredients[key].name;
-			var ingrQuant = dishIngredients[key].quantity;
+			var ingrQuant = Math.round(dishIngredients[key].quantity * model.getNumberOfGuests()).toFixed(1);
 			var ingrUnit = dishIngredients[key].unit;
-			var ingrPrice = dishIngredients[key].price;
-
-			singleIngredient.html(ingrQuant + " " + ingrUnit + " " + ingrName + " SEK  " + ingrPrice);
-			right.append(singleIngredient);
+			var ingrPrice = parseFloat(dishIngredients[key].price * model.getNumberOfGuests());
+			dishPrice += ingrPrice;
+			singleIngredient.html("<td>"+ingrQuant+" "+ingrUnit+"</td><td>"+ingrName+"</td><td>SEK</td><td>"+ingrPrice+"</td>");
+			ingrTable.append(singleIngredient);			
 		}
-
+		right.append(ingrTable);
 		var breakLine = $("<hr>")
 		right.append(breakLine);
 		
@@ -108,6 +114,10 @@ var SelectDish = function (container,model) {
 		this.rightConfirmButton.attr("id", dishID);
 		this.rightConfirmButton.addClass("confirmButton");
 		right.append(this.rightConfirmButton);
+		var dishCostdiv = $("<div>");
+		dishCostdiv.attr("id", "dishCostdiv");
+		dishCostdiv.html("SEK "+dishPrice);
+		right.append(dishCostdiv);
 		
 		masterDiv.append(right);
 

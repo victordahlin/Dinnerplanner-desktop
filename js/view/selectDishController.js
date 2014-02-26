@@ -5,6 +5,7 @@ var SelectDishController = function(view, model ) {
 		$(".col-md-3").click(function(event) { 
 		$("#searchDish").hide();
 		$("#picture-box").hide();
+
 		
 		var clickedID = $(this).attr('id');
 		var dish = model.getDish(clickedID);
@@ -14,7 +15,7 @@ var SelectDishController = function(view, model ) {
 		var dishDesc = dish.description;
 		var dishIngredients = dish.ingredients; // array
 
-		view.test(dishID, dishName, dishImage, dishDesc, dishIngredients);
+		view.showSingleDish(dishID, dishName, dishImage, dishDesc, dishIngredients);
 		updateConfirmButton();
 
 		// Show dishes and set #showDish div tag empty
