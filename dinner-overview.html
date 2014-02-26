@@ -7,48 +7,38 @@
 <title>HOMELETTE</title>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-<div class="jumbotron">
-	<div class="row">
-	<div class="col-md-5">
-		<h1>HOMELETTE</h1>
+	<div class="jumbotron">
+	  <p class="jumboLeft">HOMELETTE</p>
+	  <p class="jumboRight">For the best chefs in the world directly into your kitchen</p>
 	</div>
-	<div class="col-md-7">
-		<p id="jumboText">For the best chefs in the world directly into your kitchen</p>
-	</div>
-	</div>
-</div>
 
 <div id="overviewView">
 
-
-<div id="myDinner_top" class="row">
-	<div class="col-md-5">
-		<div id="myDinner_Header"></div>
-	</div>	
-	<div class="col-md-2 col-md-offset-4" >
-		<button id="goBack" class="btn">Go back and edit dinner</button>
-	</div>
-</div>
-
-
-<div id="myDinner_choices">
-	<div  id="myDinner_row1" class="row">
-
-
-	</div>
-
-	<div id="myDinner_row2" class="row">
-		<div class="col-md-2 col-md-offset-5" >
-			<button id="nextPage" class="btn" style="background-color:#FFCC66;"><h3>Print Full Recipe</h3></button>
+	<div id="myDinner_top" class="row">
+		<div class="col-md-5">
+			<div id="myDinner_Header"></div>
+		</div>	
+		<div class="col-md-2 col-md-offset-4" >
+			<button id="goBack" class="btn">Go back and edit dinner</button>
 		</div>
 	</div>
-</div>
+
+
+	<div id="myDinner_choices">
+		<div class="row" id="myDinner_row1">
+		</div>
+
+		<div id="myDinner_row2" class="row">
+			<div class="col-md-2 col-md-offset-5" >
+				<button id="nextPage" class="btn" style="background-color:#FFCC66;"><h3>Print Full Recipe</h3></button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div id="dinnerPrep" class=".container-fluid"></div>
@@ -71,8 +61,8 @@
 <script src="js/view/selectDish.js"></script>
 <script src="js/view/selectDishController.js"></script>
 
-<script src="js/view/exampleView.js"></script>
-<script src="js/view/exampleViewController.js"></script>
+<script src="js/view/leftView.js"></script>
+<script src="js/view/leftViewController.js"></script>
 
 </body>
 </html>

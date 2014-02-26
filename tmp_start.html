@@ -7,24 +7,52 @@
 <title>HOMELETTE</title>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+body{
+ 	background-image:url('images/FamilyEnjoyingaMeal.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-margin-top:20px;
+}
 
+#startBox{
+	margin-left:20px;
+	margin-top:100px;
+	padding:0px 50px 20px 50px;
+	background:rgba(255, 255, 255, 0.5);
+}
+
+#startBox h2{
+	border-bottom:2px solid black;
+}
+#startJumbo{
+	background:rgba(255, 240, 134, 0.6);
+	
+}
+#startButton{
+	background-color:#FFCC66;
+	border:2px solid black;
+}
+</style>
 </head>
 
 
 <body>
-<div class="row">
-	<div class="jumbotron">
-		<h2>HOMELETTE</h2>
-		<p>For the best chefs in the world directly into your kitchen</p>
-	</div>
-</div>		
+<div class="jumbotron" id="startJumbo">
+	<p class="jumboLeft">HOMELETTE</p>
+	<p class="jumboRight">For the best chefs in the world directly into your kitchen</p>
+</div>
 
 
 <div class="row">
-	<div class="col-md-6" style="background:rgba(255, 255, 255, 0.3);">
+	<div class="col-md-6" id="startBox">
 			<h2>A home dinner service </h2>
-			<p>Lorem Ipsum...</p>
-			<button type="button" class="btn btn-default">Create dinner</button>	
+			
+			<p>LLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum dui massa, id dapibus enim iaculis eu. Quisque suscipit consequat velit eget ultricies. Donec vitae mauris consequat, interdum mi eu, congue eros.</p>
+			<br/>
+			<p>Start quickly</p>
+			<button type="button" class="btn" id="startButton"><b>Create dinner</b></button>	
 	</div>
 </div>
 <!-- jQuery -->
