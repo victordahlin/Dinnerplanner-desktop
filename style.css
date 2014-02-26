@@ -155,6 +155,7 @@ button.rmBtn{
 div#selectDish.col-md-6 {
 	margin:0;
 	padding:0;
+	width:80%;
 }
 
 div#searchDish {
@@ -176,9 +177,12 @@ hr.line{
 }
 
 .col-md-3 {
-	padding:0;
-	margin:0 20px;
-	width: 120px;
+	margin:0 10px;
+	width:150px;
+}
+
+.col-md-3 img {
+	border:3px solid #000;
 }
 
 p.singleDishTitle {
@@ -190,4 +194,5 @@ p.singleDishTitle {
 
 p.singleDishDesc {
 	margin:0;
+	margin-bottom: 10px;
 }
