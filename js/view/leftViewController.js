@@ -6,8 +6,8 @@ var LeftViewController = function(view, model ) {
 	});
 	
 	this.updateRemoveBtn = function(){	
-	$(".rmBtn").click(function(){
-		var clickedID = $(this).attr('id');
+	$("#rmBtn").click(function(){
+		var clickedID = $(this).val();
 		model.removeDishFromMenu(clickedID);
 	});	
 	}
@@ -17,6 +17,8 @@ var LeftViewController = function(view, model ) {
 		if(model.getFullMenu().length == 0){
 			alert("You have no selected dishes");
 			}else{
+		$("#leftView.col-md-2").hide();
+		$("#selectDish").hide();		
 		//todo -> open overview page
 		}
 	});	

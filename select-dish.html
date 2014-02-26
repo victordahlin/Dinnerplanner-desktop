@@ -16,22 +16,24 @@
   <p class="jumboRight">For the best chefs in the world directly into your kitchen</p>
 </div>
 <div id="leftView" class="col-md-2">
-	<h3>My Dinner</h3>
-	<label>People</label><input type="number" id="numberOfGuests" value=3>
-	<div id="headers">
-		<span id="dishName">Dish Name</span>
-		<span id="dishCost">Cost</span>	
-	</div>
-	<div id="selectedDishes"></div>
-	<hr>
-	<div id="totalCostdiv">SEK<span id="totalPrice"></span></div>
-	<button id="finConfirmBtn">Confirm Dinner</button>
+<h3>My Dinner</h3>
+<label>People</label><input type="number" id="numberOfGuests" value=3>
+<table id="selectedDishes" class="table table-condensed">
+</table>
+
+<hr>
+<div id="totalCostdiv" class="text-right">
+SEK <span id="totalPrice"></span>
 </div>
+<button id="finConfirmBtn" class="btn-block">Confirm Dinner</button>
+</div>
+
+
 
 <div id="selectDish" class="col-md-6">
 	<div id="searchDish">
 		<p>SELECT DISH</p>
-		<hr class="line">
+		<hr>
 		<input type="text" value="Enter key words" id="searchBox"><button id="searchBtn">Search</button>
 		<select id="courseSel">
 			<option value="all">All</option>

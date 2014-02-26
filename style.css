@@ -75,7 +75,7 @@
 div#leftView.col-md-2 {
 	margin:0;
 	padding:0;
-	border-right:3px solid #000;
+	padding-right:5px;	
 }
 
 #leftView h3, p, span#dishName,label, span.dishname {
@@ -113,40 +113,31 @@ p.jumboRight {
 	margin-top: 15px;
 }
 
-#headers {
-	background-color: #C0C0C0;
+table#selectedDishes.table table-condensed {	
+	width: 0;
+	padding:0;
+	margin:0;
+}
+
+tr.headTR {
 	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
-	margin-bottom: 10px;
+	border-bottom: 1px solid #000;  
+	background-color: #C0C0C0;
+	font-weight: bold;	
 }
 
-.selDishRow{
-	border: 1px solid #000;
-}
-
-span#dishName {	
-	font-weight: bold;
-}
-
-span#dishCost {
-	margin-left: 50%;
-	font-weight: bold;
-}
-
-
-div.selDishRow {
+.selDishRow {
 	background-color: #F8F8F8;
 	color:#800000;
-	margin-bottom: 5px;
-}
-
-span.dishcost{
-	margin-left: 20px;
-}
-
-button.rmBtn{	
 	padding:0;
 }
+
+span.dishcost{ }
+
+span.dishname { }
+
+button#rmBtn.btn btn-danger btn-xs{	
+	}
 
 #selectedDishes {
 	margin:0 5px;
@@ -156,6 +147,7 @@ div#selectDish.col-md-6 {
 	margin:0;
 	padding:0;
 	width:80%;
+	border-left:3px solid #000;
 }
 
 div#searchDish {
@@ -195,4 +187,44 @@ p.singleDishTitle {
 p.singleDishDesc {
 	margin:0;
 	margin-bottom: 10px;
+}
+
+div#totalCostdiv.text-right {
+	padding-right:10px;
+}
+
+button#finConfirmBtn.btn-block {
+	width: 80%;
+	margin: 0 10%;
+}
+
+
+img.dishImage {
+	width: 50%;
+	height:50%;
+}
+
+div#singleDishRightBox.col-md-6 {
+	float:right;
+	background-color:#FFD685;
+	border:2px solid #000;
+}
+
+button.confirmButton {
+	margin-bottom: 10px;	
+}
+
+div#dishCostdiv {
+	float:right;
+	padding-right: 20px;
+}
+
+hr{
+	background-color: #000;
+	color: #000;
+	height:1px;
+}
+
+button {
+	background-color:orange;
 }
