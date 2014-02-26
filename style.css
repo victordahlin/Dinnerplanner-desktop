@@ -72,12 +72,13 @@
 }
 /***************************/
 
-#leftView {
+div#leftView.col-md-2 {
 	margin:0;
 	padding:0;
+	border-right:3px solid #000;
 }
 
-#leftView h3, p, #dishname, #selectedDishes,label {
+#leftView h3, p, span#dishName,label, span.dishname {
 	margin-left: 10px;
 }
 
@@ -87,46 +88,106 @@
 }
 
 input#numberOfGuests {
-	width: 20%;
+	width: 40px;
 }
 
 /* Select-dish */
 .jumbotron {
 	border-bottom: 3px solid #000;
-	margin-bottom: 0;
+	clear:both;
+	padding:10px;
+	margin:0;
+}
+
+.jumboLeft {
+	float:left;
+}
+
+p.jumboLeft {
+	font-size: 35px;
+	font-weight: bolder;
+	padding-right: 20px;
+}
+
+p.jumboRight {
+	margin-top: 15px;
 }
 
 #headers {
-	width: 115%;
 	background-color: #C0C0C0;
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
+	margin-bottom: 10px;
 }
 
 .selDishRow{
 	border: 1px solid #000;
 }
-.dishname {	
 
-
+span#dishName {	
+	font-weight: bold;
 }
 
-.dishcost{	
-
-}
-
-.rmBtn{	
-	height:15px;
-	width:15px;
+span#dishCost {
+	margin-left: 50%;
+	font-weight: bold;
 }
 
 
+div.selDishRow {
+	background-color: #F8F8F8;
+	color:#800000;
+	margin-bottom: 5px;
+}
 
-#cost {
-	margin-left: 50px;
-} 
+span.dishcost{
+	margin-left: 20px;
+}
 
-#selectDish {
-	margin-left:20px;
-	border-left: 3px solid #000;
+button.rmBtn{	
+	padding:0;
+}
+
+#selectedDishes {
+	margin:0 5px;
+}
+
+div#selectDish.col-md-6 {
+	margin:0;
+	padding:0;
+}
+
+div#searchDish {
+	margin:0;
+	background-color:#FFD685;
+	padding:20px;
+	border-bottom: 2px solid #000;
+	margin-bottom: 50px;
+}
+
+div#searchDish p {
+	font-weight: bold;
+	padding:0;
+	margin:0;
+}
+
+hr.line{
+	width: 90%;
+}
+
+.col-md-3 {
+	padding:0;
+	margin:0 20px;
+	width: 120px;
+}
+
+p.singleDishTitle {
+	border:2px solid #000;
+	margin:0;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+p.singleDishDesc {
+	margin:0;
 }

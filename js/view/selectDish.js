@@ -26,7 +26,6 @@ var SelectDish = function (container,model) {
 			var dishID = array[i].id;
 			div.addClass("col-md-3");
 			div.attr("id", dishID);
-			div.css("margin:20px;");
 
 			var imageTag = $("<img>");
 			var file = "images/" + array[i].image; 
@@ -37,11 +36,13 @@ var SelectDish = function (container,model) {
 
 			var name = array[i].name;
 			var textTitle = $("<p>");
+			textTitle.addClass("singleDishTitle");
 			textTitle.html(name);
 			div.append(textTitle);
 
 			// Shrink text to a breif text
 			var textDesc = $("<p>");
+			textDesc.addClass("singleDishDesc");
 			var desc = array[i].description;
 			if (desc.length > 20) {
 				desc = desc.substr(0, 17) + "...";
@@ -73,7 +74,6 @@ var SelectDish = function (container,model) {
 		left.append(imageTag);
 
 		var dishText = $("<p>");
-		dishText.html(dishDesc);
 		left.append(dishText);
 
 		var leftBackButton = $("<button>");
