@@ -8,12 +8,12 @@ $(function() {
 	// Views
 	var leftView = new LeftView($("#leftView"),model);
     var selectDish = new SelectDish($("#selectDish"),model);
-	//var dinnerPrep = new DinnerPrep($("#dinnerPrep"),model);
-	//var overviewView = new OverviewView($("#overviewView"),model);
+	var dinnerPrep = new DinnerPrep($("#dinnerPrep"),model);
+	var overviewView = new OverviewView($("#overviewView"),model);
 
 	// Controllers
    	var leftViewController = new LeftViewController(leftView,model);
    	var selectDishController = new SelectDishController(selectDish,model);
-	//var overviewViewController = new OverviewViewController(overviewView,model);
-	//var dinnerPrepController = new DinnerPrepController(dinnerPrep,model);
+	var overviewViewController = new OverviewViewController(overviewView,model);
+	var dinnerPrepController = new DinnerPrepController(dinnerPrep,model);
 });
