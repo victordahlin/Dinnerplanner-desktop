@@ -10,7 +10,8 @@ var TopViewController = function(view, model ) {
 			else if ($("#overviewView").is(":visible")){
 				$("#topView").hide();				
 				$("#overviewView").hide();
-				//$("#selectDish").show();				
+				$("#leftView").show();
+				$("#selectDish").show();				
 			}
 		}
 	);

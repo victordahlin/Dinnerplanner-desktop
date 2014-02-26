@@ -16,8 +16,12 @@ var LeftViewController = function(view, model ) {
 			alert("You have no selected dishes");
 			}else{
 		$("#leftView.col-md-2").hide();
-		$("#selectDish").hide();		
-		//todo -> open overview page
+		$("#selectDish").hide();
+		$("#topView").show();
+		$("#overviewView").show();	
+		
+				
+		
 		}
 	});	
 		
